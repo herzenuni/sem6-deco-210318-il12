@@ -1,15 +1,20 @@
+import functools
+
 def once(func):
+
     @functools.wraps(func)
     def inner(*args, **kwargs):
+        if deco == True:
+            return func(*args, **kwargs)
         if not inner.called:
-            func(*args, **kwargs)
             inner.called = True
-            
+            return func(*args, **kwargs)
     inner.called = False
     return inner
 
 @once
-def initialize_settings():
+def initialize_settings(txt):
     print("Settings initialized")
-    
-initialize_settings()
+    return(txt)
+
+print(initialize_settings())
