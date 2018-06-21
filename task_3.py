@@ -14,4 +14,4 @@ def initialize_settings(arg):
     return('Hello')
 
 print(once(initialize_settings)(2))
-print(initialize_settings(2))(2))
+print(initialize_settings(2))
