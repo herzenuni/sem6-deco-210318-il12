@@ -4,8 +4,6 @@ def once(func):
 
     @functools.wraps(func)
     def inner(*args, **kwargs):
-        if deco == True:
-            return func(*args, **kwargs)
         if not inner.called:
             inner.called = True
             return func(*args, **kwargs)
