@@ -45,4 +45,11 @@ def _(arg):
     return result
 
 
-print(hash({'Hello','world'}))
+class TestInit:
+
+    def test_hash(self):
+        assert(hash({'Hello','world'})=={'f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0', '7c211433f02071597741e6ff5a8ea34789abbf43'})
+
+    def test_hash_str(self):
+        assert(hash('Hello')=='f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0')
+
